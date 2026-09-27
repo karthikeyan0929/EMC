@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fbf9f6;
+  --color-surface-dim: #dbdad7;
+  --color-surface-bright: #fbf9f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3f0;
+  --color-surface-container: #efeeeb;
+  --color-surface-container-high: #eae8e5;
+  --color-surface-container-highest: #e4e2df;
+  --color-on-surface: #1b1c1a;
+  --color-on-surface-variant: #424844;
+  --color-outline: #727974;
+  --color-outline-variant: #c1c8c2;
+  --color-surface-tint: #466556;
+  
+  --color-primary: #032217;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1a382b;
+  --color-on-primary-container: #81a291;
+  --color-primary-fixed: #c8ead7;
+  --color-primary-fixed-dim: #adcebc;
+  --color-on-primary-fixed: #022115;
+  
+  --color-secondary: #5f5e61;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e4e1e5;
+  --color-secondary-fixed: #e4e1e5;
+  --color-on-secondary-fixed: #1b1b1e;
+  
+  --color-tertiary: #2a1a04;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #422f16;
+  --color-tertiary-fixed: #fdddb9;
+  --color-tertiary-fixed-dim: #e0c29f;
+  --color-on-tertiary-fixed: #281803;
+
+  --font-display-hero: "Playfair Display", Georgia, serif;
+  --font-headline-xl: "Playfair Display", Georgia, serif;
+  --font-headline-lg: "Playfair Display", Georgia, serif;
+  --font-headline-md: "Playfair Display", Georgia, serif;
+  --font-headline-sm: "Playfair Display", Georgia, serif;
+  --font-quote-editorial: "Playfair Display", Georgia, serif;
+  --font-body-lead: "Plus Jakarta Sans", sans-serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+  --font-label-caps: "Plus Jakarta Sans", sans-serif;
+  --font-label-ui: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body-md);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle paper texture */
+  .paper-grain {
+    background-image: radial-gradient(#1a382b 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    opacity: 0.025;
+  }
+}
+
+/* Material Symbols sizing helper */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Custom scrollbar for bespoke editorial look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f3f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c8c2;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #727974;
+}
